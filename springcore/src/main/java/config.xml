@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans 
-	xmlns="http://www.springframework.org/schema/beans" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns:context="http://www.springframework.org/schema/context" 
-	xmlns:p="http://www.springframework.org/schema/p" 
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-        
-	<bean class="com.spring.springcore.Student" name="student">
-		<property name="studentId">
-			<value>22344</value>
-		</property>
-				<property name="studentName">
-			<value>Steve Jobs</value>
-		</property>
-				<property name="studentAddress">
-			<value>Palo Alto</value>
-		</property>
-	</bean>
-	
-	
+	<!-- So three ways to inject values in obj, first via value tag in property, second via attribute in property and third via p schema in bean tag-->
+	<bean class="com.spring.springcore.Student" name="student" p:studentId="24856" p:studentName="Steve Jobs" p:studentAddress="Palo Alto" />
+	<!-- 		<property name="studentId" value="22344" />
+		<property name="studentName" value="Steve Jobs" />
+		<property name="studentAddress" value="Palo Alto" />-->
+	<bean class="com.spring.springcore.Student" name="student1" p:studentId="24589" p:studentName="Bill Gates" p:studentAddress="CalTech" />
+
 </beans>
