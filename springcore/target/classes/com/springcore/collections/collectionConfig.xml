@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd" xmlns:util="http://www.springframework.org/schema/util">
+	<bean class="com.springcore.collections.Employee" name="employee1">
+		<property name="empName" value="Steve Jobs"></property>
+		<property name="empPhones">
+			<list>
+				<value>red</value>
+				<value>green</value>
+				<value>blue</value>
+				<value>yellow</value>
+				<value>brown</value>
+				<value>orange</value>
+			</list>
+		</property>
+		<property name="empAddr">
+			<set>
+				<value>red</value>
+				<value>green</value>
+				<value>blue</value>
+				<value>yellow</value>
+				<value>brown</value>
+				<value>brown</value>
+				<value>orange</value>
+			</set>
+		</property>
+		<property name="empCourses">
+			<map>
+				<entry key="java" value="2months" />
+				<entry key="python" value="1.2months" />
+				<entry key="c++" value="2months" />
+			</map>
+		</property>
+		<property name="props">
+			<props>
+				<prop key="name">Steve Jobs</prop>
+				<prop key="addr">Delhi</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
