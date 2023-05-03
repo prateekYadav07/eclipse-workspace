@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd" xmlns:util="http://www.springframework.org/schema/util">
+
+	<context:annotation-config />
+
+	<bean class="com.springcore.auto.wire.Address" name="addr" p:street="Kartawya path" p:city="New Delhi" />
+
+	<!-- byName autowiring injection will work when reference variable and bean name must be same -->
+	<!-- byType autowiring injection will work when a bean of same class has been declared, if there are more than 1 bean with same type then it will throw an exception-->
+	<bean class="com.springcore.auto.wire.Employee" name="emp" autowire="constructor" />
+</beans>
