@@ -35,8 +35,6 @@
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="com.springcore.ci.Addition"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
-    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
     <fullyQualifiedTypeName name="com.springcore.lifecycle.Samosa"/>
     <fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.InitializingBean"/>
@@ -45,4 +43,11 @@
     <fullyQualifiedTypeName name="com.springcore.lifecycle.Rabdi"/>
     <fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
     <fullyQualifiedTypeName name="javax.annotation.PreDestroy"/>
+    <fullyQualifiedTypeName name="com.springcore.auto.wire.Address"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="com.springcore.auto.wire.Employee"/>
+    <fullyQualifiedTypeName name="com.springcore.auto.wire.annotation.Employee"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
 </qualifiedTypeNameHistroy>
