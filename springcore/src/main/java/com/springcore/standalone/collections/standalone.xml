@@ -5,7 +5,6 @@
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/util
         http://www.springframework.org/schema/util/spring-util.xsd">
-
 	<!-- Standalone List -->
 	<util:list list-class="java.util.LinkedList" id="mbf">
 		<value>Tommy</value>
@@ -20,7 +19,7 @@
 		<entry key="Django Framework" value="5000" />
 		<entry key="ExpressJs Framework" value="6000" />
 	</util:map>
-	
+
 	<!-- standalone properties -->
 	<util:properties id="prop">
 		<prop key="user">Prateek Yadav</prop>
@@ -28,7 +27,8 @@
 		<prop key="driver">com.mysql.jdbc.driver</prop>
 	</util:properties>
 
-	<bean class="com.springcore.standalone.collections.Person" name="p1" p:friends-ref="mbf" p:courseInfo-ref="course" p:props-ref="prop"/>
-	<bean class="com.springcore.standalone.collections.Person" name="p2" p:friends-ref="mbf" p:courseInfo-ref="course" p:props-ref="prop"/>
-	
+	<bean class="com.springcore.standalone.collections.Person" name="p1" p:friends-ref="mbf" p:courseInfo-ref="course" p:props-ref="prop" />
+	<bean class="com.springcore.standalone.collections.Person" name="p2" p:friends-ref="mbf" p:courseInfo-ref="course" p:props-ref="prop" />
+
+
 </beans>
