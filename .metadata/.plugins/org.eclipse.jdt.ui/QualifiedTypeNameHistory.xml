@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
-    <fullyQualifiedTypeName name="java.io.FileWriter"/>
-    <fullyQualifiedTypeName name="BaseClass"/>
     <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
@@ -30,7 +27,6 @@
     <fullyQualifiedTypeName name="com.springcore.auto.wire.Address"/>
     <fullyQualifiedTypeName name="com.springcore.auto.wire.Employee"/>
     <fullyQualifiedTypeName name="com.springcore.auto.wire.annotation.Employee"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
     <fullyQualifiedTypeName name="com.sprincore.standalone.collections.Person"/>
@@ -44,8 +40,6 @@
     <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.HelloWorldConfig"/>
     <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.Person"/>
     <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.Address"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.game.SuperContra"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
     <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.AppGameConfig"/>
@@ -55,9 +49,15 @@
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.App01GamingBasic"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Primary"/>
     <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.game.Pacman"/>
-    <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.game.GameRunner"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+    <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.game.GameRunner"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.examples.a1.DependencyOne"/>
+    <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.examples.a1.DependencyTwo"/>
+    <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.examples.a1.BusinessClass"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 </qualifiedTypeNameHistroy>
