@@ -14,7 +14,7 @@ public class DepInjectionAppLauncher {
 		try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
 				DepInjectionAppLauncher.class)) {
 			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
-			System.out.println(context.getBean(BusinessClass.class));
+			System.out.println(context.getBean(BusinessClass.class));;
 		}
 	}
 
