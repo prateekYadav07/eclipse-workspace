@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class BusinessCalculationService {
 
-	DataService dataService;
+	private DataService dataService;
 
 	public BusinessCalculationService(@Qualifier("mysql")DataService dataService) {
 		super();
