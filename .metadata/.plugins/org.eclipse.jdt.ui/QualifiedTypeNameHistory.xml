@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
-    <fullyQualifiedTypeName name="com.spring.springcore.Student"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="com.springcore.collections.Employee"/>
     <fullyQualifiedTypeName name="com.springcore.ci.Person"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Lazy"/>
     <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.examples.a2.ClassB"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.config.ConfigurableBeanFactory"/>
+    <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.examples.a3.PrototypeClass"/>
+    <fullyQualifiedTypeName name="com.in28minutes.learnspringframework.examples.a3.NormalClass"/>
 </qualifiedTypeNameHistroy>
