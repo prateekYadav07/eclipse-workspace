@@ -15,6 +15,7 @@ org.eclipse.jdt.ui.PropertiesFileEditor.textfont=1|Monospace|12.0|0|GTK|1|;
 org.eclipse.jdt.ui.editors.textfont=1|Monospace|12.0|0|GTK|1|;
 org.eclipse.jface.textfont=1|Monospace|12.0|0|GTK|1|;
 org.eclipse.mylyn.wikitext.ui.presentation.textFont=1|Monospace|12.0|0|GTK|1|;
+org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\n<org.eclipse.ui.commands/>
 org.eclipse.ui.r30.ACTIVE_HYPERLINK_COLOR=138,201,242
 org.eclipse.ui.r30.CONFLICTING_COLOR=240,15,66
 org.eclipse.ui.r30.CONTENT_ASSIST_BACKGROUND_COLOR=52,57,61
