@@ -18,4 +18,9 @@
 		<item key="internalFilter" value="true"/>
 		<item key="uncategorizedFilter" value="true"/>
 	</section>
+	<section name="EditorSelectionDialog">
+		<item key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION" value=".sql"/>
+		<item key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL" value="true"/>
+		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="Eclipse IDE for Enterprise Java and Web Developers - 2022-09"/>
+	</section>
 </section>
