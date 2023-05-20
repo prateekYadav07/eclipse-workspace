@@ -72,6 +72,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/prateekyadav/eclipse-workspace/myFirstSpringApp"/>
 			<item value="/home/prateekyadav/eclipse-workspace/learn-jpa-and-hibernate"/>
 			<item value="/home/prateekyadav/eclipse-workspace/learn-spring-boot"/>
 			<item value="/home/prateekyadav/eclipse-workspace"/>
