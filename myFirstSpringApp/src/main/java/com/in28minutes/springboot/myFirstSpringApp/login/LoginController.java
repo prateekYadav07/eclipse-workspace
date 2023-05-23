@@ -5,8 +5,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
+@SessionAttributes("name")
 public class LoginController {
 
 	// logger level is defined in application file, like info, warn, debug
@@ -20,6 +22,13 @@ public class LoginController {
 //		return "login";
 //	}
 
+	private AuthenticationService authenticationService;
+
+	public LoginController(AuthenticationService authenticationService) {
+		super();
+		this.authenticationService = authenticationService;
+	}
+
 	@RequestMapping(value = "login", method = RequestMethod.GET)
 	public String login() {
 		return "login";
@@ -29,7 +38,12 @@ public class LoginController {
 	public String goToWelcomePage(@RequestParam String name, String password, ModelMap model) {
 		model.put("name", name);
 		model.put("password", password);
-		return "welcome";
+
+		// authentication
+		if (authenticationService.authenticate(name, password))
+			return "welcome";
+		model.put("error", "incorrect username or password");
+		return "login";
 	}
 
 }

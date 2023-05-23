@@ -6,11 +6,7 @@
 <title>TODO</title>
 </head>
 <body>
-	<p>Welcome - Please Login</p>
-	<pre> ${ error } </pre>
-	<form method="post">
-		Name: <input type="text" name="name"> Password: <input
-			type="password" name="password"> <input type="submit">
-	</form>
+	<p>Welcome ${name} - Your Todos</p>
+	<div>${todos }</div>
 </body>
 </html>

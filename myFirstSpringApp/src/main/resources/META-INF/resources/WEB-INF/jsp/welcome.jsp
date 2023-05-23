@@ -8,6 +8,7 @@
 <body>
 <div>
 	<p>Welcome to application, ${ name } </p>
+	<div><a href="list-todos">Manage your todos</a></div>
 </div>
 </body>
 </html>
