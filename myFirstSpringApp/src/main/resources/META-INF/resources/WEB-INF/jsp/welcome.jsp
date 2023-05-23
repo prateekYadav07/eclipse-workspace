@@ -6,10 +6,8 @@
 <title>TODO</title>
 </head>
 <body>
-	<p>Welcome - Please Login</p>
-	<form method="post">
-		Name: <input type="text" name="name"> Password: <input
-			type="password" name="password"> <input type="submit">
-	</form>
+<div>
+	<p>Welcome to application, ${ name } </p>
+</div>
 </body>
 </html>
