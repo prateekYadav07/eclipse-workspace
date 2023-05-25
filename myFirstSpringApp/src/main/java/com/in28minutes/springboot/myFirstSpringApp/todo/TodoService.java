@@ -13,8 +13,8 @@ public class TodoService {
 
 	static {
 		todos.add(new Todo(1, "in28minutes", "Learn Spring", LocalDate.now().plusMonths(1), false));
-		todos.add(new Todo(1, "in28minutes", "Learn AWS", LocalDate.now().plusWeeks(1), false));
-		todos.add(new Todo(1, "in28minutes", "Learn PostgressSQL", LocalDate.now().plusYears(1), false));
+		todos.add(new Todo(2, "in28minutes", "Learn AWS", LocalDate.now().plusWeeks(1), false));
+		todos.add(new Todo(3, "in28minutes", "Learn PostgressSQL", LocalDate.now().plusYears(1), false));
 	}
 
 	public List<Todo> findByUsername(String username) {
