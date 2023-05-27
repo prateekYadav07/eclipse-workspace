@@ -2,13 +2,23 @@ package com.in28minutes.springboot.myFirstSpringApp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 public class Todo {
 
 	private int id;
 	private String username;
+	
+	@NotEmpty(message = "Description cannot be empty")
+	@Size(min = 3, message = "Description must be atleast 3 characters")
 	private String description;
 	private LocalDate targetDate;
 	private boolean done;
+
+	public Todo() {
+		super();
+	}
 
 	public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
 		super();

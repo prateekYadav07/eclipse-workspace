@@ -10,6 +10,8 @@
 </head>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css"
 	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <body>
 	<div class="container px-4 text-center">
 		<div class="row">
@@ -17,7 +19,8 @@
 				<h1>TODOs:</h1>
 			</div>
 			<div class="col">
-				<a class="btn btn-success" href="add-todos" role="button">Add Todo</a>
+				<a class="btn btn-success" href="add-todos" role="button">Add
+					Todo</a>
 			</div>
 		</div>
 		<div class="row">
@@ -26,19 +29,23 @@
 				<table class="table table-hover table-success table-striped">
 					<thead>
 						<tr>
-							<th scope="col">Id</th>
 							<th scope="col">Description</th>
 							<th scope="col">Target Date</th>
 							<th scope="col">Is Done?</th>
+							<th scope="col">Action</th>
 						</tr>
 					</thead>
 					<tbody>
 						<c:forEach items="${ todos }" var="todo">
 							<tr>
-								<th scope="row">${ todo.id }</th>
 								<td>${ todo.description}</td>
 								<td>${ todo.targetDate }</td>
 								<td>${ todo.done }</td>
+								<td><a href="edit-todo?id=${ todo.id }"
+									title="edit ${ todo.description}" class="btn btn-success">Update</a>
+									<a href="delete-todo?id=${ todo.id }"
+									title="delete ${ todo.description}" class="btn btn-warning">Delete
+								</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

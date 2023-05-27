@@ -3,8 +3,11 @@ package com.in28minutes.springboot.myFirstSpringApp.todo;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
+
+import jakarta.validation.Valid;
 
 @Service
 public class TodoService {
@@ -25,9 +28,24 @@ public class TodoService {
 		}
 		return null;
 	}
-	
+
 	public void addTodo(String username, String description, LocalDate date, boolean done) {
 		todos.add(new Todo(todosCount++, username, description, date, done));
+	}
+
+	public void deleteById(int id) {
+		todos.removeIf(todo -> todo.getId() == id);
+	}
+
+	public Todo findById(int id) {
+		return todos.stream().filter(todo -> todo.getId() == id).findFirst().get();
+	}
+
+	public void updateTodo(@Valid Todo todo) {
+		Todo oldTodo = findById(todo.getId());
+		oldTodo.setDescription(todo.getDescription());
+		oldTodo.setTargetDate(todo.getTargetDate());
+		oldTodo.setDone(todo.isDone());
 	}
 
 }
