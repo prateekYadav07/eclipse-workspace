@@ -3,8 +3,6 @@ package com.in28minutes.springboot.myFirstSpringApp.todo;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.stereotype.Service;
 
 import jakarta.validation.Valid;
@@ -23,9 +21,8 @@ public class TodoService {
 
 	public List<Todo> findByUsername(String username) {
 		List<Todo> filteredList = todos.stream().filter(item -> item.getUsername().equalsIgnoreCase(username)).toList();
-		if (!filteredList.isEmpty()) {
+		if (!filteredList.isEmpty())
 			return filteredList;
-		}
 		return null;
 	}
 
