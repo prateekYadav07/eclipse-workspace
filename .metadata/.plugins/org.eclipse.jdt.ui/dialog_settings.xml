@@ -116,4 +116,9 @@
 		<item key="DIALOG_HEIGHT" value="605"/>
 		<item key="DIALOG_FONT_NAME" value="1|Inter|9.0|0|GTK|1|"/>
 	</section>
+	<section name="ExtractMethodWizard">
+		<item key="ThrowRuntimeExceptions" value="false"/>
+		<item key="GenerateJavadoc" value="false"/>
+		<item key="AccessModifier" value="2"/>
+	</section>
 </section>
