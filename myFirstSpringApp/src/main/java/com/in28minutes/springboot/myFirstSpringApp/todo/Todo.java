@@ -2,14 +2,20 @@ package com.in28minutes.springboot.myFirstSpringApp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
+@Entity
 public class Todo {
 
+	@Id
+	@GeneratedValue
 	private int id;
 	private String username;
-	
+
 	@NotEmpty(message = "Description cannot be empty")
 	@Size(min = 3, message = "Description must be atleast 3 characters")
 	private String description;

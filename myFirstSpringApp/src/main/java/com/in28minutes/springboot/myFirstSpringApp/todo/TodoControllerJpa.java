@@ -12,21 +12,23 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jakarta.validation.Valid;
 
-//@Controller
+@Controller
 @SessionAttributes("name")
-public class TodoController {
+public class TodoControllerJpa {
 
 	private TodoService todoService;
+	private TodoRepository todoRepository;
 
-	public TodoController(TodoService todoService) {
+	public TodoControllerJpa(TodoService todoService, TodoRepository todoRepository) {
 		super();
 		this.todoService = todoService;
+		this.todoRepository = todoRepository;
 	}
 
 	// list-todos
 	@RequestMapping(value = "list-todos", method = RequestMethod.GET)
 	public String listAllTodos(ModelMap model) {
-		model.addAttribute("todos", this.todoService.findByUsername((String) model.get("name")));
+		model.addAttribute("todos", todoRepository.findByUsername((String) model.get("name")));
 		return "listTodos";
 	}
 
