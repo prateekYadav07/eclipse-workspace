@@ -25,7 +25,14 @@
 								<tr class="table-info">
 									<td>${ todo.description}</td>
 									<td>${ todo.targetDate }</td>
-									<td>${ todo.done }</td>
+									<c:choose>
+										<c:when test="${ todo.done }">
+											<td>Yes</td>
+										</c:when>
+										<c:otherwise>
+											<td>No</td>
+										</c:otherwise>
+									</c:choose>
 									<td><a href="edit-todo?id=${ todo.id }"
 										title="edit ${ todo.description}" class="btn btn-success">Update</a>
 										<a href="delete-todo?id=${ todo.id }"
