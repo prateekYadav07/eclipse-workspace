@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
@@ -19,6 +20,7 @@ public class Todo {
 	@NotEmpty(message = "Description cannot be empty")
 	@Size(min = 3, message = "Description must be atleast 3 characters")
 	private String description;
+	@FutureOrPresent
 	private LocalDate targetDate;
 	private boolean done;
 
