@@ -57,8 +57,10 @@ public class TodoControllerJpa {
 
 	@RequestMapping(value = "edit-todo", method = RequestMethod.GET)
 	public String showUpdateTodo(@RequestParam int id, ModelMap model) {
-		model.addAttribute("todo", todoRepository.findById(id).get());
-		model.addAttribute("done", true);
+		Todo todo = todoRepository.findById(id).get();
+		model.addAttribute("todo", todo);
+		model.addAttribute("showDone", true);
+		model.addAttribute("isDone", todo.isDone());
 		return "todo";
 	}
 
