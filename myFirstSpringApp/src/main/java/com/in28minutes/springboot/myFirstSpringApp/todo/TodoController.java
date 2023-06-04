@@ -2,7 +2,6 @@ package com.in28minutes.springboot.myFirstSpringApp.todo;
 
 import java.time.LocalDate;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jakarta.validation.Valid;
 
-//@Controller
 @SessionAttributes("name")
 public class TodoController {
 
