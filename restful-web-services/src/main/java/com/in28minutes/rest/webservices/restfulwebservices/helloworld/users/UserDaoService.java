@@ -10,22 +10,26 @@ import org.springframework.stereotype.Component;
 public class UserDaoService {
 
 	private static List<User> users = new ArrayList<>();
+	private static long count = 0;
 
 	static {
-		users.add(new User(1, "Joey", LocalDate.now()));
-		users.add(new User(2, "Chandler", LocalDate.now()));
-		users.add(new User(3, "Ross", LocalDate.now()));
+		users.add(new User(count++, "Joey", LocalDate.now()));
+		users.add(new User(count++, "Chandler", LocalDate.now()));
+		users.add(new User(count++, "Ross", LocalDate.now()));
 	}
 
 	public List<User> findAllUsers() {
 		return users;
 	}
 
+	public User save(User user) {
+		user.setId(count++);
+		users.add(user);
+		return user;
+	}
+	
 	public User getUserById(long id) {
-		List<User> usersList = users.stream().filter(item -> item.getId().equals(id)).toList();
-		if (!usersList.isEmpty())
-			return usersList.get(0);
-		return null;
+		return users.stream().filter(item -> item.getId().equals(id)).findFirst().orElse(null);
 	}
 
 }
