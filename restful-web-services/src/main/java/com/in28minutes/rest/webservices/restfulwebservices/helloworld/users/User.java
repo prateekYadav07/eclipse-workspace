@@ -3,6 +3,8 @@ package com.in28minutes.rest.webservices.restfulwebservices.helloworld.users;
 import java.time.LocalDate;
 import java.util.List;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -23,6 +25,7 @@ public class User {
 	@JsonProperty("user_name")
 	private String name;
 	@Past(message = "Birth date should be in the past")
+	@DateTimeFormat(fallbackPatterns = {"yyyy-MM-dd"})
 	@JsonProperty("birth_date")
 	private LocalDate birthDate;
 
