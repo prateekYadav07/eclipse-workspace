@@ -1,15 +1,26 @@
-
-function count(val){
-    console.log( "counter clicked");
-}
+import { useState } from "react";
+import CounterButton from './counterButton'
+import Reset from "./reset";
 
 export default function Counter() {
-return (
-    <div className="counter" >
-            <div><span className="count">0</span></div>
-            <button className="count-btn Increment" onClick={count}>Increment</button>
-            <button className="count-btn reset" >Reset</button>
-            <button className="count-btn Decrement" onClick={count}>Decrement</button>
-        </div>
+    const [countVal, setCount] = useState(0);
+
+    function parentCounter(val) {
+        if ((countVal + val) >= 0)
+            setCount(countVal + val);
+    }
+
+    function resetCounter() {
+        setCount(0)
+    }
+
+    return (
+        <>
+            <div className="count"><span >{countVal}</span></div>
+            <Reset resetCounter={resetCounter} />
+            <CounterButton parentCounter={parentCounter} />
+            <CounterButton parentCounter={parentCounter} by={2} />
+            <CounterButton parentCounter={parentCounter} by={3} />
+        </>
     )
 }
