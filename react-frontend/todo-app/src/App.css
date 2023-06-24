@@ -1,7 +1,10 @@
 .App {
   padding-top: 2rem;
-  font-weight: 600;
   text-align: center;
+}
+
+.counter{
+  
 }
 
 .first-component{

@@ -1,7 +1,7 @@
 import SecondComponent from './SecondComponent';
 import ThirdComponent from './ThirdComponent';
 import { FourthComponent, FifthComponent } from './FourthComponent';
-
+import LearningJs from './learningJs';
 import "../../../src/App.css";
 
 
@@ -14,6 +14,7 @@ export default function FirstComponent() {
                 <ThirdComponent />
                 <FourthComponent />
                 <FifthComponent />
+                <LearningJs />
             </div>
         </>
     );

@@ -1,11 +1,12 @@
 import "./App.css";
-import FirstComponent  from "./components/learning-examples/FirstComponent"
+// import FirstComponent  from "./components/learning-examples/FirstComponent"
+import Counter from "./components/counter/counter";
 
 function App() {
   return (
     <div className="App">
-      Todo Application app component
-      <FirstComponent />
+      <Counter /> 
+      {/* <FirstComponent /> */}
     </div>
   );
 }
