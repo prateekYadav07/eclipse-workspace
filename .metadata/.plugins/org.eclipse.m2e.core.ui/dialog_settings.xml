@@ -25,13 +25,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.spring.springcore"/>
 		</list>
 		<list key="groupId">
-			<item value="com.spring"/>
 		</list>
 		<list key="artifactId">
-			<item value="springcore"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -47,10 +44,12 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="gmailAPI"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="testing"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
