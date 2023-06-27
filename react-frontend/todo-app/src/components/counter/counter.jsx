@@ -16,11 +16,11 @@ export default function Counter() {
 
     return (
         <>
-            <div className="count"><span >{countVal}</span></div>
-            <Reset resetCounter={resetCounter} />
             <CounterButton parentCounter={parentCounter} />
             <CounterButton parentCounter={parentCounter} by={2} />
             <CounterButton parentCounter={parentCounter} by={3} />
+            <div className="count"><span >{countVal}</span></div>
+            <Reset resetCounter={resetCounter} />
         </>
     )
 }
