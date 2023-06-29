@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../../src/Login.css";
 
 export default function LoginComponent() {
@@ -6,6 +7,7 @@ export default function LoginComponent() {
     const [password, setPassword] = useState("dummy")
     const [showSuccessMsg, setShowSuccessMsg] = useState(false)
     const [showFailureMsg, setShowFailureMsg] = useState(false)
+    const navigate = useNavigate();
 
 
     function usernameHandler(event) {
@@ -21,6 +23,7 @@ export default function LoginComponent() {
             console.log("success");
             setShowSuccessMsg(true)
             setShowFailureMsg(false)
+            navigate('welcome')
         }
         else {
             console.log('failure');
@@ -31,6 +34,7 @@ export default function LoginComponent() {
 
     return (
         <div className="login">
+            Todo Management App
             <SuccessMsgComponent showSuccessMsg={showSuccessMsg} />
             <FailureMsgComponent showFailureMsg={showFailureMsg} />
             <div className="wrapper fadeInDown">
@@ -45,9 +49,9 @@ export default function LoginComponent() {
                     <input type="submit" className="fadeIn fourth" value="Log In" onClick={handleLogin} />
                     {/* </form> */}
 
-                    <div id="formFooter">
+                    {/* <div id="formFooter">
                         <a className="underlineHover" href="#">Forgot Password?</a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
