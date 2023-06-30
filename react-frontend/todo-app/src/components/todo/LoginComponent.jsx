@@ -23,7 +23,7 @@ export default function LoginComponent() {
             console.log("success");
             setShowSuccessMsg(true)
             setShowFailureMsg(false)
-            navigate('welcome')
+            navigate(`welcome/${username}`)
         }
         else {
             console.log('failure');
