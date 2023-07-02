@@ -1,3 +1,5 @@
+import FooterComponent from "./FooterComponent"
+import HeaderComponent from "./HeaderComponent"
 
 export default function ListTodoComponent() {
     const today = new Date()
@@ -11,6 +13,7 @@ export default function ListTodoComponent() {
 
     return (
         <div className="listtodoscomponent">
+            <HeaderComponent />
             <h1>Things you want to do</h1>
             <div>
                 Todo details
@@ -37,6 +40,7 @@ export default function ListTodoComponent() {
 
                 </tbody>
             </table>
+            <FooterComponent />
         </div>
     )
 }
