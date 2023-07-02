@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 
 @RestController
@@ -32,13 +34,23 @@ public class UserResource {
 	public List<User> retrieveAllUsers() {
 		return userDaoService.findAllUsers();
 	}
+	
+	@GetMapping("set")
+	public String setCookie(HttpServletResponse response) {
+	    // set a new cookie
+	    Cookie cookie = new Cookie("color", "blue");
+	    // add cookie in server response
+	    response.addCookie(cookie);
+
+	    return "Spring Boot Cookies";
+	}
 
 	@GetMapping("users/{id}")
 	public EntityModel<User> retrieveAUserById(@PathVariable long id) {
 		User userById = userDaoService.getUserById(id);
 		if (userById == null)
 			throw new UserNotFoundException("id: " + id);
-		
+		Cookie cookie = new Cookie("username", userById.getName());
 		EntityModel<User> entityModel = EntityModel.of(userById);
 		WebMvcLinkBuilder link = linkTo(methodOn(this.getClass()).retrieveAllUsers());
 		entityModel.add(link.withRel("all-users"));
