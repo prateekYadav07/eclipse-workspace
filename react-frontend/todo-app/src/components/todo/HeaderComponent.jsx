@@ -1,19 +1,33 @@
 import { Link } from "react-router-dom";
+import { AuthContext } from "./security/AuthContext";
+import { useContext } from "react";
 
 export default function HeaderComponent({ username }) {
+
+    const authContext = useContext(AuthContext)
+    // authContext.setNumber(10)
+    // console.log(authContext.number);
     return (
         <>
-            <div class="container">
-                <header class="d-flex justify-content-center py-3">
-                    <ul class="nav nav-pills">
-                        <li class="nav-item"><Link to={`/welcome/${username}`} class="nav-link" aria-current="page">Home</Link></li>
-                        <li class="nav-item"><Link to="/list-todos" class="nav-link">Todos</Link></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                    </ul>
-                </header>
-            </div>
+            <header className="border-bottom border-light border-5 mb-5 p-2">
+                <div className="container">
+                    <div className="row">
+                        <nav className="navbar navbar-expand-lg">
+                            <a className="navbar-brand ms-2 fs-2 fw-bold text-black" href="https://www.in28minutes.com">in28minutes</a>
+                            <div className="collapse navbar-collapse">
+                                <ul className="navbar-nav">
+                                    <li className="nav-item fs-5"><Link className="nav-link" to="/welcome/in28minutes">Home</Link></li>
+                                    <li className="nav-item fs-5"><Link className="nav-link" to="/list-todos">Todos</Link></li>
+                                </ul>
+                            </div>
+                            <ul className="navbar-nav">
+                                <li className="nav-item fs-5"><Link className="nav-link" to="/login">Login</Link></li>
+                                <li className="nav-item fs-5"><Link className="nav-link" to="/logout">Logout</Link></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
         </>
     )
 }
