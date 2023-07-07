@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../../src/Login.css";
+import { useAuth } from "./security/AuthContext";
 
 export default function LoginComponent() {
     const [username, setUserName] = useState("in28minutes")
@@ -8,7 +9,8 @@ export default function LoginComponent() {
     const [showSuccessMsg, setShowSuccessMsg] = useState(false)
     const [showFailureMsg, setShowFailureMsg] = useState(false)
     const navigate = useNavigate();
-
+    const authContext = useAuth();
+    
 
     function usernameHandler(event) {
         setUserName(event.target.value);
@@ -20,13 +22,13 @@ export default function LoginComponent() {
 
     function handleLogin() {
         if (username === 'in28minutes' && password === 'dummy') {
-            console.log("success");
+            authContext.setAuth(true)
             setShowSuccessMsg(true)
             setShowFailureMsg(false)
             navigate(`/welcome/${username}`)
         }
         else {
-            console.log('failure');
+            authContext.setAuth(false)
             setShowSuccessMsg(false)
             setShowFailureMsg(true)
         }
