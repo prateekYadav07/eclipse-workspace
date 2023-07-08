@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../../../src/Login.css";
 import { useAuth } from "./security/AuthContext";
 
 export default function LoginComponent() {
-    const [username, setUserName] = useState("in28minutes")
+    const [username, setUserName] = useState("prateek")
     const [password, setPassword] = useState("dummy")
-    const [showSuccessMsg, setShowSuccessMsg] = useState(false)
     const [showFailureMsg, setShowFailureMsg] = useState(false)
     const navigate = useNavigate();
     const authContext = useAuth();
-    
 
     function usernameHandler(event) {
         setUserName(event.target.value);
@@ -21,48 +18,40 @@ export default function LoginComponent() {
     }
 
     function handleLogin() {
-        if (username === 'in28minutes' && password === 'dummy') {
-            authContext.setAuth(true)
-            setShowSuccessMsg(true)
-            setShowFailureMsg(false)
+        const authenticated = authContext.login(username, password)
+        if (authenticated) {
             navigate(`/welcome/${username}`)
         }
         else {
-            authContext.setAuth(false)
-            setShowSuccessMsg(false)
             setShowFailureMsg(true)
         }
     }
 
     return (
-        <div className="login">
-            Todo Management App
-            <SuccessMsgComponent showSuccessMsg={showSuccessMsg} />
+        <div className="container-sm" style={{ textAlign: "start" }}>
             <FailureMsgComponent showFailureMsg={showFailureMsg} />
-            <div className="wrapper fadeInDown">
-                <div id="formContent">
-                    <div className="fadeIn first">
-                        {/* <img src="" id="icon" alt="Todo Management App" /> */}
-                    </div>
-
-                    {/* <form> */}
-                    <input type="text" id="login" className="fadeIn second" name="login" placeholder="username" value={username} onChange={usernameHandler} />
-                    <input type="password" id="password" className="fadeIn third" name="login" placeholder="password" value={password} onChange={passwordHandler} />
-                    <input type="submit" className="fadeIn fourth" value="Log In" onClick={handleLogin} />
-                    {/* </form> */}
-
-                    {/* <div id="formFooter">
-                        <a className="underlineHover" href="#">Forgot Password?</a>
-                    </div> */}
+            <div className="card" style={{ width: "18rem;" }}>
+                <div className="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label me-auto">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="login" placeholder="username" value={username} onChange={usernameHandler} />
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="login" placeholder="password" value={password} onChange={passwordHandler} />
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" onClick={handleLogin}>Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
     )
-}
-
-function SuccessMsgComponent({ showSuccessMsg }) {
-    if (showSuccessMsg)
-        return <div className="alert alert-primary" role="alert">Authentication successful</div>
 }
 
 function FailureMsgComponent({ showFailureMsg }) {

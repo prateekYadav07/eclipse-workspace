@@ -12,32 +12,36 @@ export default function ListTodoComponent() {
     return (
         <>
             <div className="container">
-                <h1>Things you want to do</h1>
-                <div>
-                    Todo details
-                </div>
-                <table className="table">
-                    <thead>
-                        <tr>
-                            {Object.keys(todos[0]).map((key, index) => (
-                                <th scope="col" key={index}>{key}</th>
-                            ))}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            todos.map((todo) => (
-                                <tr key={todo.id}>
-                                    <th scope="row">{todo.id}</th>
-                                    <td >{todo.description}</td>
-                                    <td >{todo.done.toString()}</td>
-                                    <td >{todo.targetDate.toString()}</td>
+                <div className="card" style={{ width: "18rem;" }}>
+                    <div className="card-body">
+                        <h1>Things you want to do</h1>
+                        <div>
+                            Todo details
+                        </div>
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                    {Object.keys(todos[0]).map((key, index) => (
+                                        <th scope="col" key={index}>{key}</th>
+                                    ))}
                                 </tr>
-                            ))
-                        }
+                            </thead>
+                            <tbody>
+                                {
+                                    todos.map((todo) => (
+                                        <tr key={todo.id}>
+                                            <th scope="row">{todo.id}</th>
+                                            <td >{todo.description}</td>
+                                            <td >{todo.done.toString()}</td>
+                                            <td >{todo.targetDate.toString()}</td>
+                                        </tr>
+                                    ))
+                                }
 
-                    </tbody>
-                </table>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </>
     )

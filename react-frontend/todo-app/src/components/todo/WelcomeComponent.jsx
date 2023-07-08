@@ -1,14 +1,23 @@
-import { useParams, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
+import { useAuth } from "./security/AuthContext"
 
 export default function WelcomeComponent() {
-    const { username } = useParams()
+    const authContext = useAuth()
+    const isAuth = authContext.isAuth
+    const user = authContext.username
 
     return (
         <>
-            <div className="welcome">
-                <h1>Welcome to Todos, {username}</h1>
-                <div>
-                    <Link to="/list-todos">Manage your todos</Link>
+            <div className="container welcome">
+                <div className="card" style={{ width: "18rem;" }}>
+                    <div className="card-body">
+                        {isAuth ? <h1 className="card-title">Welcome to Todos, {user}</h1> :
+                            <h1 className="card-title">Welcome to Todos</h1>}
+
+                        <div>
+                            {isAuth && <Link to="/list-todos">Manage your todos</Link>}
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
