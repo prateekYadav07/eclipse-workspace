@@ -1,0 +1,14 @@
+[{
+	"gender": null,
+	"isAllergic": false,
+	"name": "Jane Stark",
+	"age": 22,
+	"amountSpent": 153.27
+},
+{
+	"gender": null,
+	"isAllergic": true,
+	"name": "John Snow",
+	"age": 24,
+	"amountSpent": 290
+}]

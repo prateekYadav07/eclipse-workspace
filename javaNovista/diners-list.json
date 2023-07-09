@@ -1,0 +1,16 @@
+{
+	"diners": [
+		{
+			"gender": "Female",
+			"isAllergic": false,
+			"name": "Jane Stark",
+			"age": 22,
+			"amountSpent": 153.27
+		},
+		{
+			"name": "Jon Snow",
+			"age": 25,
+			"amountSpent": 750.5
+		}
+	]
+}
