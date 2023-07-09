@@ -10,6 +10,11 @@ export default function AuthProvider({ children }) {
     //put some state in the context
     const [isAuth, setAuth] = useState(false)
     const [username, setUsername] = useState("")
+    const config = {
+        headers: {
+            'origin' : 'http://localhost:3000'
+        }
+    }
 
     function login(usernameFromLogin, password) {
         if (usernameFromLogin === 'prateek' && password === 'dummy') {
@@ -28,7 +33,7 @@ export default function AuthProvider({ children }) {
     }
 
     return (
-        <AuthContext.Provider value={{ isAuth, username, login, logout }}>
+        <AuthContext.Provider value={{ isAuth, username, login, logout, config }}>
             {children}
         </AuthContext.Provider>
     )

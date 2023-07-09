@@ -44,11 +44,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.java.novista"/>
 			<item value="gmailAPI"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="track3"/>
 			<item value="testing"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -71,6 +73,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/prateekyadav/eclipse-workspace/todo-rest-webservices"/>
 			<item value="/home/prateekyadav/eclipse-workspace/restful-web-services"/>
 			<item value="/home/prateekyadav/eclipse-workspace/myFirstSpringApp"/>
 			<item value="/home/prateekyadav/eclipse-workspace/learn-jpa-and-hibernate"/>
